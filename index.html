@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body
+    class="flex min-h-screen flex-col items-center bg-offWhite font-inter lg:py-14"
+  >
+    <main class="flex max-w-[1200px] flex-col md:gap-8">
+      <header>
+        <div class="container p-4">
+          <!-- desktop -->
+          <nav class="hidden items-center justify-between lg:flex">
+            <span><img src="./assets/images/logo.svg" alt="" /></span>
+            <ul class="flex gap-6 text-darkGrayishBlue">
+              <li class="hover:text-softRed"><a href="">Home</a></li>
+              <li class="hover:text-softRed"><a href="">New</a></li>
+              <li class="hover:text-softRed"><a href="">Popular</a></li>
+              <li class="hover:text-softRed"><a href="">Trending</a></li>
+              <li class="hover:text-softRed"><a href="">Categories</a></li>
+            </ul>
+          </nav>
+          <!-- mobile  -->
+          <nav class="flex items-center justify-between lg:hidden">
+            <img class="w-10" src="./assets/images/logo.svg" alt="logo" />
+            <img
+              class="hamburgerIcon"
+              src="./assets/images/icon-menu.svg"
+              alt="hamburger menu"
+            />
+            <div
+              class="mobile-menu absolute right-0 top-0 z-10 hidden h-screen w-[70%] space-y-24 bg-offWhite p-4"
+            >
+              <img
+                class="close absolute right-4 h-7 w-7"
+                src="./assets/images/icon-menu-close.svg"
+                alt="close"
+              />
+              <ul class="space-y-6 text-lg">
+                <li class="text-veryDarkBlue hover:text-softRed">
+                  <a href="">Home</a>
+                </li>
+                <li class="text-veryDarkBlue hover:text-softRed">
+                  <a href="">New</a>
+                </li>
+                <li class="text-veryDarkBlue hover:text-softRed">
+                  <a href="">Popular</a>
+                </li>
+                <li class="text-veryDarkBlue hover:text-softRed">
+                  <a href="">Trending</a>
+                </li>
+                <li class="text-veryDarkBlue hover:text-softRed">
+                  <a href="">Categories</a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="overlay z-5 backdrop-blur-xs absolute left-0 top-0 hidden h-full w-full bg-black bg-opacity-60"
+            ></div>
+          </nav>
+        </div>
+      </header>
+      <section>
+        <div class="container grid grid-cols-1 gap-4 p-4 lg:grid-cols-3">
+          <article class="space-y-4 lg:col-span-2">
+            <picture>
+              <source
+                srcset="./assets/images/image-web-3-desktop.jpg"
+                media="(min-width: 480px)"
+              />
+              <img src="./assets/images/image-web-3-mobile.jpg" alt="" />
+            </picture>
+            <div
+              class="grid grid-cols-1 gap-2 space-y-4 md:grid-cols-2 md:gap-6"
+            >
+              <h1
+                class="flex items-center pr-4 text-[2.5rem] font-bold leading-none text-veryDarkBlue md:w-full md:text-[3.4rem]"
+              >
+                The Bright Future of Web 3.0?
+              </h1>
+              <div class="flex flex-col items-start justify-between space-y-8">
+                <p class="text-lg text-darkGrayishBlue">
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <button
+                  class="cursor-pointer bg-softRed px-8 py-3 text-sm font-semibold uppercase tracking-[4px] text-offWhite hover:bg-black"
+                >
+                  Read more
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="mt-8 flex flex-col justify-between bg-veryDarkBlue py-8 pl-4 pr-8 md:mt-0"
+          >
+            <h2 class="text-3xl font-semibold text-softOrange md:text-[3rem]">
+              New
+            </h2>
+            <article class="space-y-1 border-b-2 border-offWhite/20 py-8">
+              <h3
+                class="cursor-pointer text-xl font-semibold text-white hover:text-softOrange md:text-2xl"
+              >
+                Hydrogen VS Electric Cars
+              </h3>
+              <p class="text-lg font-light text-darkGrayishBlue">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </article>
+            <article class="space-y-1 border-b-2 border-offWhite/20 py-8">
+              <h3
+                class="cursor-pointer text-xl font-semibold text-white hover:text-softOrange"
+              >
+                The Downsides of AI Artistry
+              </h3>
+              <p class="text-lg font-light text-darkGrayishBlue">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </article>
+            <article class="mt-6 space-y-1 border-offWhite/20">
+              <h3
+                class="cursor-pointer text-xl font-semibold text-white hover:text-softOrange"
+              >
+                Is VC Funding Drying Up?
+              </h3>
+              <p class="text-lg font-light text-darkGrayishBlue">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </article>
+          </article>
+        </div>
+      </section>
+      <section>
+        <div class="container grid grid-cols-1 gap-4 p-4 lg:grid-cols-3">
+          <article class="flex gap-6">
+            <img
+              class="h-28 w-28"
+              src="./assets/images/image-retro-pcs.jpg"
+              alt="retro pc"
+            />
+            <div class="flex flex-col justify-between">
+              <h3 class="text-2xl font-bold text-grayishBlue">01</h3>
+              <h4
+                class="cursor-pointer text-lg font-bold text-veryDarkBlue hover:text-softRed"
+              >
+                Reviving Retro PCs
+              </h4>
+              <p class="md:text-md text-sm text-darkGrayishBlue">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </article>
+          <article class="flex gap-6">
+            <img
+              class="h-28 w-28"
+              src="./assets/images/image-top-laptops.jpg"
+              alt="top laptops"
+            />
+            <div class="flex flex-col justify-between">
+              <h3 class="text-2xl font-bold text-grayishBlue">02</h3>
+              <h4
+                class="cursor-pointer text-lg font-bold text-veryDarkBlue hover:text-softRed"
+              >
+                10 Laptops of 2022
+              </h4>
+              <p class="md:text-md text-sm text-darkGrayishBlue">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </article>
+          <article class="flex gap-6">
+            <img
+              class="h-28 w-28"
+              src="./assets/images/image-gaming-growth.jpg"
+              alt="gaming growth"
+            />
+            <div class="flex flex-col justify-between">
+              <h3 class="text-2xl font-bold text-grayishBlue">03</h3>
+              <h4
+                class="cursor-pointer text-lg font-bold text-veryDarkBlue hover:text-softRed"
+              >
+                The Growth of Gaming
+              </h4>
+              <p class="md:text-md text-sm text-darkGrayishBlue">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
